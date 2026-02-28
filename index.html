@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Widya Jaya Nusantara - Maintenance Kolam Renang Profesional</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0EA5E9;
+      --primary-dark: #0284C7;
+      --secondary: #064E6E;
+      --accent: #06B6D4;
+      --dark: #0C1425;
+      --light: #F0F9FF;
+    }
+    
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .gradient-hero {
+      background: linear-gradient(135deg, #0C1425 0%, #064E6E 50%, #0C1425 100%);
+    }
+    
+    .gradient-cta {
+      background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+    }
+    
+    .water-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0zm0 10c-11.046 0-20 8.954-20 20s8.954 20 20 20 20-8.954 20-20-8.954-20-20-20z' fill='%230EA5E9' fill-opacity='0.03'/%3E%3C/svg%3E");
+    }
+    
+    .shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: shimmer 2s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .pulse-ring::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border: 2px solid currentColor;
+      border-radius: inherit;
+      animation: pulse-ring 1.5s ease-out infinite;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.25);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.5);
+    }
+    
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+    
+    .btn-primary:hover::after {
+      transform: translateX(100%);
+    }
+    
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #0EA5E9, transparent);
+    }
+    
+    .stat-card {
+      background: rgba(14, 165, 233, 0.1);
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      backdrop-filter: blur(10px);
+    }
+    
+    .testimonial-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%);
+    }
+    
+    .partner-logo {
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    
+    .partner-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    
+    .wave-bg {
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230EA5E9' fill-opacity='0.05' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+      background-size: cover;
+    }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-white text-gray-800 overflow-auto">
+  <div class="w-full min-h-full"><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-16 md:h-20">
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+       </div>
+       <div><span class="font-heading font-bold text-gray-900 text-lg">Widya Jaya</span> <span class="hidden sm:inline text-xs text-gray-500 block -mt-1">Pool Maintenance Specialist</span>
+       </div>
+      </div>
+      <div class="hidden md:flex items-center gap-8"><a href="#masalah" class="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Masalah</a> <a href="#solusi" class="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Solusi</a> <a href="#keunggulan" class="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Keunggulan</a> <a href="#kontak" class="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Kontak</a>
+      </div><a href="tel:0811877480" class="btn-primary text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2">
+       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+       </svg><span id="nav-phone">081-1877-480</span> </a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section class="gradient-hero min-h-screen pt-20 relative overflow-hidden"><!-- Decorative Elements -->
+    <div class="absolute inset-0 opacity-30">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-sky-500 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400 rounded-full blur-3xl"></div>
+    </div><!-- Water Ripple Pattern -->
+    <div class="absolute inset-0 water-pattern opacity-50"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+     <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+       <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 rounded-full px-4 py-2 mb-6"><span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span> <span class="text-cyan-300 text-sm font-medium">Spesialis Maintenance Sejak 2005</span>
+       </div>
+       <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4"><span id="hero-title">Kolam Keruh?</span><br><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300" id="hero-title-2">Mesin Sering Bermasalah?</span></h1>
+       <p class="text-xl md:text-2xl text-sky-100 font-medium mb-6" id="hero-subtitle">Serahkan Maintenance Kolam Anda ke Spesialis.</p>
+       <p class="text-gray-300 text-lg mb-8 max-w-xl mx-auto lg:mx-0"><strong class="text-white">PT Widya Jaya Nusantara</strong> menghadirkan layanan maintenance kolam renang profesional untuk rumah pribadi dan proyek konstruksi.</p>
+       <div class="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"><span class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-white">⚡ Presisi</span> <span class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-white">🚀 Respons Cepat</span> <span class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm text-white">🛡️ Preventive System</span>
+       </div>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><a href="#kontak" class="btn-primary text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-3"> <span id="cta-button">Jadwalkan Inspeksi Sekarang</span>
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></a> <a href="tel:0811877480" class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-3 hover:bg-white/10 transition-all">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span id="hero-phone">081-1877-480</span> </a>
+       </div>
+      </div>
+      <div class="relative hidden lg:block"><!-- Pool Illustration -->
+       <div class="relative float-animation">
+        <div class="w-full aspect-square max-w-lg mx-auto relative"><!-- Pool Shape -->
+         <div class="absolute inset-0 bg-gradient-to-br from-sky-400 to-cyan-500 rounded-3xl transform rotate-3 opacity-20"></div>
+         <div class="absolute inset-4 bg-gradient-to-br from-sky-500/30 to-cyan-400/30 rounded-2xl backdrop-blur-xl border border-white/20 flex items-center justify-center">
+          <div class="text-center p-8">
+           <div class="w-32 h-32 mx-auto mb-6 relative">
+            <svg viewbox="0 0 100 100" class="w-full h-full"><!-- Pool water --> <ellipse cx="50" cy="60" rx="40" ry="25" fill="url(#poolGradient)" opacity="0.8" /> <!-- Pool edge --> <ellipse cx="50" cy="60" rx="40" ry="25" fill="none" stroke="#0EA5E9" stroke-width="3" /> <!-- Water ripples --> <ellipse cx="50" cy="60" rx="30" ry="18" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.5" /> <ellipse cx="50" cy="60" rx="20" ry="12" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.3" /> <!-- Sparkle --> <circle cx="35" cy="55" r="2" fill="white" /> <circle cx="60" cy="50" r="1.5" fill="white" opacity="0.8" /> <defs>
+              <lineargradient id="poolGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+               <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:0.6" />
+               <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.4" />
+              </lineargradient>
+             </defs>
+            </svg>
+           </div>
+           <div class="space-y-3">
+            <div class="flex items-center gap-3 text-white">
+             <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+             </svg><span>Air selalu jernih &amp; aman</span>
+            </div>
+            <div class="flex items-center gap-3 text-white">
+             <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+             </svg><span>Mesin lebih awet</span>
+            </div>
+            <div class="flex items-center gap-3 text-white">
+             <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+             </svg><span>Minim risiko kerusakan</span>
+            </div>
+            <div class="flex items-center gap-3 text-white">
+             <svg class="w-5 h-5 text-cyan-400" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+             </svg><span>Spare part bergaransi</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Wave Divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+     <svg viewbox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="none" class="w-full h-16 md:h-24"><path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white" />
+     </svg>
+    </div>
+   </section><!-- Section 1: Problems -->
+   <section id="masalah" class="py-20 bg-white water-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">⚠️ Masalah Umum</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Jangan Tunggu Sampai <span class="text-red-500">Mesin Rusak Total</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Banyak pemilik rumah mengalami masalah berikut karena tidak ada sistem preventive maintenance yang tepat.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Air Cepat Keruh</h3>
+       <p class="text-gray-600">Meskipun sudah diberi obat, air tetap keruh dan tidak jernih seperti seharusnya.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Pompa Bermasalah</h3>
+       <p class="text-gray-600">Pompa sering mati mendadak atau mengeluarkan suara berisik yang mengganggu.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-yellow-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Tagihan Listrik Naik</h3>
+       <p class="text-gray-600">Konsumsi listrik meningkat drastis akibat mesin yang tidak efisien.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Heater Tidak Stabil</h3>
+       <p class="text-gray-600">Suhu air tidak konsisten, terkadang terlalu panas atau terlalu dingin.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Kolam Jarang Dipakai</h3>
+       <p class="text-gray-600">Kolam tidak siap pakai kapan saja, sehingga jarang dinikmati keluarga.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover">
+       <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
+        <svg class="w-7 h-7 text-pink-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-lg mb-2">Biaya Servis Mendadak</h3>
+       <p class="text-gray-600">Pengeluaran tak terduga untuk perbaikan darurat yang mahal.</p>
+      </div>
+     </div>
+     <div class="mt-12 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 border border-red-100">
+      <div class="flex flex-col md:flex-row items-center gap-6">
+       <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+       </div>
+       <div>
+        <h3 class="font-heading font-bold text-gray-900 text-xl mb-2">Tahukah Anda?</h3>
+        <p class="text-gray-700">Masalah-masalah ini biasanya terjadi karena <strong>tidak ada sistem preventive maintenance yang tepat</strong>. Dengan perawatan rutin dan terukur, sebagian besar masalah ini dapat dicegah.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 2: Solutions -->
+   <section id="solusi" class="py-20 bg-gradient-to-b from-sky-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">💡 Solusi Kami</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Kami Tidak Hanya Membersihkan.<br><span class="text-sky-600">Kami Menjaga Sistemnya.</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">PT Widya Jaya Nusantara berfokus pada maintenance berbasis sistem, bukan sekadar perawatan permukaan.</p>
+     </div>
+     <div class="grid lg:grid-cols-2 gap-8 mb-16"><!-- Water Care -->
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-sky-100 card-hover">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-cyan-400 rounded-2xl flex items-center justify-center">
+         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-heading font-bold text-2xl text-gray-900">Perawatan Air Presisi</h3>
+         <p class="text-sky-600 font-medium">Water Treatment System</p>
+        </div>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-sky-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Vacuum &amp; Brushing Menyeluruh</span>
+          <p class="text-gray-600 text-sm">Pembersihan dasar dan dinding kolam secara detail</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-sky-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Balancing pH &amp; Chlorine Terukur</span>
+          <p class="text-gray-600 text-sm">Pengukuran dan penyesuaian kadar kimia air yang presisi</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-sky-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Backwash Filtrasi Rutin</span>
+          <p class="text-gray-600 text-sm">Pembersihan sistem filter untuk sirkulasi optimal</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-sky-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Monitoring Kualitas Air</span>
+          <p class="text-gray-600 text-sm">Pemantauan berkala untuk menjaga standar kesehatan</p>
+         </div></li>
+       </ul>
+      </div><!-- Equipment Maintenance -->
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-sky-100 card-hover">
+       <div class="flex items-center gap-4 mb-6">
+        <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-teal-400 rounded-2xl flex items-center justify-center">
+         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg>
+        </div>
+        <div>
+         <h3 class="font-heading font-bold text-2xl text-gray-900">Maintenance Mesin</h3>
+         <p class="text-cyan-600 font-medium">Equipment &amp; Technical Service</p>
+        </div>
+       </div>
+       <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Pemeriksaan Pompa &amp; Motor</span>
+          <p class="text-gray-600 text-sm">Inspeksi rutin untuk mencegah kerusakan dini</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Inspeksi Filter System</span>
+          <p class="text-gray-600 text-sm">Pengecekan dan perawatan sistem filtrasi</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Heater &amp; Chiller Maintenance</span>
+          <p class="text-gray-600 text-sm">Perawatan sistem pengatur suhu air</p>
+         </div></li>
+        <li class="flex items-start gap-3">
+         <svg class="w-6 h-6 text-cyan-500 flex-shrink-0 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg>
+         <div><span class="font-semibold text-gray-900">Panel Listrik &amp; Timer Control</span>
+          <p class="text-gray-600 text-sm">Pengecekan sistem kontrol dan kelistrikan</p>
+         </div></li>
+       </ul>
+      </div>
+     </div><!-- Partner Section -->
+     <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12">
+      <div class="text-center mb-8">
+       <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-3">Mitra Resmi Brand Terpercaya</h3>
+       <p class="text-gray-400">Kami memastikan penggunaan equipment original dan bergaransi</p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <a href="http://www.haywardindonesia.com/" target="_blank" rel="noopener" class="text-center partner-logo cursor-pointer block">
+          <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mb-2 mx-auto">
+            <img src="./assets/hayward-logo.png" alt="Hayward Logo" class="object-contain h-16 w-auto" style="max-width:72px;max-height:64px;" />
+          </div>
+          <span class="text-gray-400 text-sm hover:text-sky-600">PT Hayward Indonesia</span>
+        </a>
+        <a href="https://waterco.co.id/" target="_blank" rel="noopener" class="text-center partner-logo cursor-pointer block">
+          <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mb-2 mx-auto">
+            <img src="./assets/waterco-logo.png" alt="Waterco Logo" class="object-contain h-16 w-auto" style="max-width:72px;max-height:64px;" />
+          </div>
+          <span class="text-gray-400 text-sm hover:text-blue-600">PT Waterco Indonesia</span>
+        </a>
+        <a href="https://www.fluidra.co.id/" target="_blank" rel="noopener" class="text-center partner-logo cursor-pointer block">
+          <div class="w-20 h-20 bg-white rounded-xl flex items-center justify-center mb-2 mx-auto">
+            <img src="./assets/fluida-logo.png" alt="Fluidra Logo" class="object-contain h-16 w-auto" style="max-width:72px;max-height:64px;" />
+          </div>
+          <span class="text-gray-400 text-sm hover:text-indigo-600">PT Fluidra Indonesia</span>
+        </a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 3: Why Choose Us -->
+   <section id="keunggulan" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div><span class="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">🏆 Keunggulan Kami</span>
+       <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Spesialis Maintenance<br><span class="text-sky-600">Sejak 2005</span></h2>
+       <p class="text-gray-600 text-lg mb-8">Kami bekerja secara sistematis dan terukur dengan fokus pada hasil jangka panjang, bukan solusi sementara.</p>
+       <div class="space-y-6">
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-heading font-bold text-gray-900 text-lg">Pengalaman 15+ Tahun</h3>
+          <p class="text-gray-600">Pengalaman teknis yang terbukti dalam menangani berbagai jenis kolam renang.</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-heading font-bold text-gray-900 text-lg">Fokus Residensial &amp; Kontraktor</h3>
+          <p class="text-gray-600">Melayani kebutuhan rumah pribadi hingga proyek konstruksi skala besar.</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-heading font-bold text-gray-900 text-lg">Preventive Maintenance System</h3>
+          <p class="text-gray-600">Sistem perawatan preventif untuk mencegah kerusakan sebelum terjadi.</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-heading font-bold text-gray-900 text-lg">Respons Cepat &amp; Komunikatif</h3>
+          <p class="text-gray-600">Tim yang responsif dan selalu siap memberikan update kondisi kolam Anda.</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-heading font-bold text-gray-900 text-lg">Dokumentasi &amp; Evaluasi Berkala</h3>
+          <p class="text-gray-600">Laporan lengkap dan evaluasi rutin untuk monitoring kondisi kolam.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="relative">
+       <div class="bg-gradient-to-br from-sky-100 to-cyan-100 rounded-3xl p-8 md:p-12">
+        <div class="grid grid-cols-2 gap-6">
+         <div class="stat-card rounded-2xl p-6 text-center">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-sky-600 mb-2">
+           15+
+          </div>
+          <div class="text-gray-600 font-medium">
+           Tahun Pengalaman
+          </div>
+         </div>
+         <div class="stat-card rounded-2xl p-6 text-center">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-cyan-600 mb-2">
+           500+
+          </div>
+          <div class="text-gray-600 font-medium">
+           Kolam Terlayani
+          </div>
+         </div>
+         <div class="stat-card rounded-2xl p-6 text-center">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-teal-600 mb-2">
+           98%
+          </div>
+          <div class="text-gray-600 font-medium">
+           Klien Puas
+          </div>
+         </div>
+         <div class="stat-card rounded-2xl p-6 text-center">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-emerald-600 mb-2">
+           24/7
+          </div>
+          <div class="text-gray-600 font-medium">
+           Support
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 4: Target Audience -->
+   <section class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block bg-sky-500/20 border border-sky-400/30 text-sky-300 px-4 py-2 rounded-full text-sm font-semibold mb-4">👥 Untuk Siapa Layanan Ini?</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Solusi untuk Setiap Kebutuhan</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8"><!-- Homeowners -->
+      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 card-hover">
+       <div class="w-20 h-20 bg-gradient-to-br from-sky-500 to-cyan-400 rounded-2xl flex items-center justify-center mb-6">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+       </div>
+       <h3 class="font-heading text-2xl font-bold text-white mb-4">Pemilik Rumah Pribadi</h3>
+       <p class="text-gray-300 text-lg mb-6">Anda ingin kolam selalu siap pakai tanpa repot mengurus teknis. Nikmati waktu bersama keluarga di kolam yang selalu bersih dan aman.</p>
+       <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Kolam siap pakai kapan saja</li>
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Tidak perlu pusing urusan teknis</li>
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-cyan-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Aman untuk seluruh keluarga</li>
+       </ul>
+      </div><!-- Contractors -->
+      <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 card-hover">
+       <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-teal-400 rounded-2xl flex items-center justify-center mb-6">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div>
+       <h3 class="font-heading text-2xl font-bold text-white mb-4">Developer &amp; Kontraktor</h3>
+       <p class="text-gray-300 text-lg mb-6">Anda membutuhkan partner maintenance after handover untuk mengurangi komplain klien dan menjaga reputasi proyek.</p>
+       <ul class="space-y-3">
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-teal-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Kurangi komplain klien</li>
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-teal-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Jaga reputasi proyek</li>
+        <li class="flex items-center gap-3 text-gray-300">
+         <svg class="w-5 h-5 text-teal-400 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+         </svg> Partner after handover terpercaya</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 5: Long-term Benefits -->
+   <section class="py-20 bg-white wave-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">📈 Dampak Jangka Panjang</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Maintenance Adalah <span class="text-emerald-600">Proteksi Aset</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Maintenance bukan biaya tambahan. Ini adalah investasi untuk melindungi aset properti Anda.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover text-center">
+       <div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-xl mb-3">Umur Mesin Lebih Panjang</h3>
+       <p class="text-gray-600">Perawatan rutin memperpanjang usia pakai equipment hingga 2x lipat.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover text-center">
+       <div class="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-xl mb-3">Energi Lebih Efisien</h3>
+       <p class="text-gray-600">Mesin yang terawat bekerja optimal dengan konsumsi listrik lebih hemat.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover text-center">
+       <div class="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-xl mb-3">Biaya Perbaikan Ditekan</h3>
+       <p class="text-gray-600">Pencegahan lebih murah dari perbaikan. Hindari biaya perbaikan besar yang mendadak.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover text-center">
+       <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-xl mb-3">Nilai Properti Terjaga</h3>
+       <p class="text-gray-600">Kolam yang terawat menjaga dan meningkatkan nilai jual properti Anda.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover text-center">
+       <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-gray-900 text-xl mb-3">Aman untuk Keluarga</h3>
+       <p class="text-gray-600">Air yang selalu bersih dan seimbang memastikan keamanan kesehatan keluarga.</p>
+      </div>
+      <div class="bg-gradient-to-br from-sky-500 to-cyan-500 rounded-2xl p-8 shadow-lg card-hover text-center text-white">
+       <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-heading font-bold text-xl mb-3">Proteksi Aset</h3>
+       <p class="text-white/90">Maintenance adalah investasi cerdas untuk melindungi aset berharga Anda.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 6: Testimonials -->
+   <section class="py-20 bg-gradient-to-b from-sky-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16"><span class="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">💬 Testimoni Klien</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Apa Kata Mereka?</h2>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8">
+      <div class="testimonial-card rounded-3xl p-8 shadow-lg border border-sky-100">
+       <div class="flex items-center gap-1 mb-4">
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <svg class="w-10 h-10 text-sky-200 mb-4" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+       </svg>
+       <p class="text-gray-700 text-lg mb-6 leading-relaxed">"Sejak menggunakan maintenance rutin, <strong>kolam selalu jernih dan mesin tidak pernah bermasalah lagi</strong>. Sangat puas dengan layanannya!"</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-cyan-400 rounded-full flex items-center justify-center"><span class="text-white font-bold">AS</span>
+        </div>
+        <div>
+         <div class="font-heading font-bold text-gray-900">
+          Ahmad Surya
+         </div>
+         <div class="text-gray-500 text-sm">
+          Pemilik Rumah - Kemang, Jakarta
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="testimonial-card rounded-3xl p-8 shadow-lg border border-sky-100">
+       <div class="flex items-center gap-1 mb-4">
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <svg class="w-10 h-10 text-sky-200 mb-4" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+       </svg>
+       <p class="text-gray-700 text-lg mb-6 leading-relaxed">"<strong>Respons cepat dan teknisinya detail dalam menjelaskan kondisi sistem</strong>. Kami merasa lebih tenang setelah handover proyek ke mereka."</p>
+       <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-teal-400 rounded-full flex items-center justify-center"><span class="text-white font-bold">BP</span>
+        </div>
+        <div>
+         <div class="font-heading font-bold text-gray-900">
+          Budi Pratama
+         </div>
+         <div class="text-gray-500 text-sm">
+          Project Manager - Ciputra Development
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Section 7: Special Offer -->
+   <section class="py-20 bg-gradient-to-r from-sky-600 to-cyan-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+     <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20">
+      <div class="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
+       <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M5 2a2 2 0 00-2 2v14l3.5-2 3.5 2 3.5-2 3.5 2V4a2 2 0 00-2-2H5zm2.5 3a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6.207.293a1 1 0 00-1.414 0l-6 6a1 1 0 101.414 1.414l6-6a1 1 0 000-1.414zM12.5 10a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" clip-rule="evenodd" />
+       </svg> PENAWARAN KHUSUS
+      </div>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Gratis Konsultasi &amp;<br>
+       Pemeriksaan Awal*</h2>
+      <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">Kami akan melakukan evaluasi awal kondisi kolam Anda secara menyeluruh:</p>
+      <div class="grid sm:grid-cols-2 gap-4 mb-10 max-w-xl mx-auto">
+       <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+        <svg class="w-6 h-6 text-cyan-300 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg><span class="text-white font-medium">Kualitas Air</span>
+       </div>
+       <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+        <svg class="w-6 h-6 text-cyan-300 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg><span class="text-white font-medium">Sistem Sirkulasi</span>
+       </div>
+       <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+        <svg class="w-6 h-6 text-cyan-300 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg><span class="text-white font-medium">Kondisi Mesin</span>
+       </div>
+       <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+        <svg class="w-6 h-6 text-cyan-300 flex-shrink-0" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg><span class="text-white font-medium">Risiko Kerusakan</span>
+       </div>
+      </div>
+      <p class="text-white/70 text-sm mb-8">*Untuk area Jakarta dan sekitarnya</p><a href="tel:0811877480" class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-sky-50 transition-all transform hover:scale-105 shadow-lg">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+       </svg> Klaim Penawaran Sekarang </a>
+     </div>
+    </div>
+   </section><!-- Section 8: Final CTA -->
+   <section id="kontak" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Jangan Tunggu Sampai<br><span class="text-sky-600">Kolam Bermasalah</span></h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Ambil langkah sekarang untuk melindungi investasi kolam renang Anda.</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-6 mb-12"><a href="#kontak" class="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-center card-hover group">
+       <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+       </div><h3 class="font-heading font-bold text-white text-xl mb-2">Jadwalkan Maintenance</h3><p class="text-white/80">Atur jadwal perawatan rutin sekarang</p></a> <a href="tel:0811877480" class="bg-gradient-to-br from-cyan-500 to-teal-500 rounded-2xl p-8 text-center card-hover group">
+       <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+       </div><h3 class="font-heading font-bold text-white text-xl mb-2">Konsultasi Gratis</h3><p class="text-white/80">Diskusikan kebutuhan kolam Anda</p></a> <a href="tel:0811877480" class="bg-gradient-to-br from-emerald-500 to-green-500 rounded-2xl p-8 text-center card-hover group">
+       <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+       </div><h3 class="font-heading font-bold text-white text-xl mb-2">Paket Bulanan</h3><p class="text-white/80">Dapatkan penawaran terbaik</p></a>
+     </div>
+     <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+       <div class="text-center md:text-left">
+        <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-2">Hubungi Kami Sekarang</h3>
+        <p class="text-gray-400">Tim kami siap membantu Anda 24/7</p>
+       </div>
+       <div class="flex flex-col sm:flex-row items-center gap-4"><a href="tel:0811877480" class="relative btn-primary pulse-ring text-white px-8 py-4 rounded-full font-bold text-xl inline-flex items-center gap-3">
+         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span id="footer-phone">081-1877-480</span> </a>
+       </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-white/10">
+       <div class="flex flex-wrap justify-center gap-6 text-gray-400">
+        <div class="flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Jakarta</span>
+        </div>
+        <div class="flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Bandung</span>
+        </div>
+        <div class="flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Bogor</span>
+        </div>
+        <div class="flex items-center gap-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+         </svg><span>Karawang</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-slate-900 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+       <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-400 flex items-center justify-center">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+       </div><span class="font-heading font-bold text-white">PT Widya Jaya Nusantara</span>
+      </div>
+      <p class="text-gray-500 text-sm">© 2024 PT Widya Jaya Nusantara. All rights reserved.</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_title: 'Kolam Keruh?',
+      hero_subtitle: 'Serahkan Maintenance Kolam Anda ke Spesialis.',
+      phone_number: '081-1877-480',
+      cta_button_text: 'Jadwalkan Inspeksi Sekarang',
+      background_color: '#0C1425',
+      surface_color: '#FFFFFF',
+      text_color: '#1F2937',
+      primary_action_color: '#0EA5E9',
+      secondary_action_color: '#06B6D4'
+    };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          // Update hero title
+          const heroTitle = document.getElementById('hero-title');
+          if (heroTitle) heroTitle.textContent = config.hero_title || defaultConfig.hero_title;
+          
+          // Update hero subtitle
+          const heroSubtitle = document.getElementById('hero-subtitle');
+          if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+          
+          // Update phone numbers
+          const phoneNumber = config.phone_number || defaultConfig.phone_number;
+          document.getElementById('nav-phone').textContent = phoneNumber;
+          document.getElementById('hero-phone').textContent = phoneNumber;
+          document.getElementById('footer-phone').textContent = phoneNumber;
+          
+          // Update CTA button text
+          const ctaButton = document.getElementById('cta-button');
+          if (ctaButton) ctaButton.textContent = config.cta_button_text || defaultConfig.cta_button_text;
+          
+          // Update colors
+          const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+          const secondaryColor = config.secondary_action_color || defaultConfig.secondary_action_color;
+          
+          document.documentElement.style.setProperty('--primary', primaryColor);
+          document.documentElement.style.setProperty('--accent', secondaryColor);
+          
+          // Update button gradients
+          const buttons = document.querySelectorAll('.btn-primary');
+          buttons.forEach(btn => {
+            btn.style.background = `linear-gradient(135deg, ${primaryColor} 0%, ${secondaryColor} 100%)`;
+          });
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_action_color || defaultConfig.primary_action_color,
+              set: (value) => {
+                config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            },
+            {
+              get: () => config.secondary_action_color || defaultConfig.secondary_action_color,
+              set: (value) => {
+                config.secondary_action_color = value;
+                window.elementSdk.setConfig({ secondary_action_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || 'Plus Jakarta Sans',
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || 16,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['hero_title', config.hero_title || defaultConfig.hero_title],
+          ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+          ['phone_number', config.phone_number || defaultConfig.phone_number],
+          ['cta_button_text', config.cta_button_text || defaultConfig.cta_button_text]
+        ])
+      });
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d52895cc6ffe785',t:'MTc3MjMwOTEyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
