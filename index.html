@@ -636,14 +636,34 @@
       </button>
     </div>
     <script>
-      const projects = Array.from({length: 30}, (_, i) => ({
-        name: `Klien ${i+1}`,
-        location: `Lokasi ${i+1}`,
-        photo: `https://picsum.photos/seed/${i+1}/400/240`,
-        desc: `Proyek kolam renang ke-${i+1}, maintenance & instalasi.`
+      const names = [
+        'Ahmad Surya','Budi Pratama','Siti Rahmawati','Dewi Lestari','Andi Wijaya',
+        'Rina Marlina','Hendra Setiawan','Maya Putri','Dian Kusuma','Ricky Hidayat',
+        'Lina Kartika','Fajar Nugraha','Sari Oktaviani','Teguh Santoso','Nina Sari',
+        'Yusuf Hamdi','Putri Maharani','Agus Salim','Rizky Andara','Indra Kurnia',
+        'Wulan Sari','Erwin Saputra','Vina Susanti','Gilang Prasetyo','Rani Amelia',
+        'Bimo Aditya','Mira Saputri','Tirta Wijaya','Siska Novita','Hendra Pratama'
+      ];
+      const locationsList = [
+        'Kemang, Jakarta','Ciputra, Jakarta','BSD, Tangerang','Menteng, Jakarta','Setiabudi, Jakarta',
+        'Bandung Tengah','Dago, Bandung','Cimahi','Bekasi Timur','Depok',
+        'Surabaya','Semarang','Yogyakarta','Malang','Solo',
+        'Pekanbaru','Medan','Balikpapan','Makassar','Bali',
+        'Bogor','Karawang','Cirebon','Tasikmalaya','Bandung Barat',
+        'Jakarta Barat','Jakarta Selatan','Jakarta Utara','Jakarta Pusat','Tangerang'
+      ];
+
+      const projects = names.map((n, i) => ({
+        name: n,
+        location: locationsList[i % locationsList.length],
+        photo: `https://picsum.photos/seed/project${i+1}/400/240`,
+        desc: `Maintenance & instalasi untuk kolam (proyek contoh).`
       }));
+
       let page = 0;
       const pageSize = 6;
+      const totalPages = Math.ceil(projects.length / pageSize);
+
       function renderProjects() {
         const grid = document.getElementById('project-cards');
         grid.innerHTML = '';
@@ -662,12 +682,16 @@
           grid.appendChild(card);
         }
       }
+
       document.getElementById('prev-btn').onclick = function() {
-        if (page > 0) { page--; renderProjects(); }
+        page = (page - 1 + totalPages) % totalPages;
+        renderProjects();
       };
       document.getElementById('next-btn').onclick = function() {
-        if ((page+1)*pageSize < projects.length) { page++; renderProjects(); }
+        page = (page + 1) % totalPages;
+        renderProjects();
       };
+
       document.addEventListener('DOMContentLoaded', renderProjects);
     </script>
   </div>
@@ -759,7 +783,32 @@
       </div>
      </div>
     </div>
-   </section><!-- Footer -->
+   </section>
+
+  <!-- Locations Section -->
+  <section class="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="inline-block bg-sky-500/20 border border-sky-400/30 text-sky-300 px-4 py-2 rounded-full text-sm font-semibold mb-4">📍 Lokasi Kantor & Workshop</span>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">Kunjungi Kantor dan Workshop Kami</h2>
+        <p class="text-gray-300 mt-2">Kami memiliki kantor pusat dan dua lokasi workshop untuk layanan cepat dan dukungan teknis.</p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+          <h3 class="font-bold text-white mb-2">Main Office</h3>
+          <p class="text-gray-300 text-sm">Talavera Office Suite, Lantai 18.<br>Jl. TB Simatupang Kav. 22-23,<br>Kel. Cilandak Barat, Kec. Cilandak,<br>Jakarta Selatan, DKI Jakarta 12430</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+          <h3 class="font-bold text-white mb-2">Workshop Jakarta</h3>
+          <p class="text-gray-300 text-sm">Jl. Manunggal No 38 RT 06/07 Meruya Selatan,<br>Kec. Kembangan, Jakarta Barat</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+          <h3 class="font-bold text-white mb-2">Workshop Bandung</h3>
+          <p class="text-gray-300 text-sm">Jl. Baru Raya 140, Cangkuang Kulon,<br>Kec. Dayeuh Kolot, Bandung</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- Footer -->
    <footer class="bg-slate-900 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -769,7 +818,7 @@
         </svg>
        </div><span class="font-heading font-bold text-white">PT Widya Jaya Nusantara</span>
       </div>
-      <p class="text-gray-500 text-sm">© 2024 PT Widya Jaya Nusantara. All rights reserved.</p>
+      <p class="text-gray-500 text-sm">© 2026 PT Widya Jaya Nusantara. All rights reserved.</p>
      </div>
     </div>
    </footer>
