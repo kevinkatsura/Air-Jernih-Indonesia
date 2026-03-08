@@ -1,17 +1,17 @@
 export default function Advantages() {
   return (
-    <section id="keunggulan" className="py-20 bg-white">
+    <section id="keunggulan" className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
-            <span className="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold mb-3 md:mb-4">
               🏆 Keunggulan Kami
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               Spesialis Maintenance<br />
               <span className="text-sky-600">Sejak 2005</span>
             </h2>
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-base md:text-lg mb-6 md:mb-8">
               Kami bekerja secara sistematis dan terukur dengan fokus pada hasil jangka panjang, bukan solusi sementara.
             </p>
 
@@ -83,25 +83,25 @@ export default function Advantages() {
             </div>
           </div>
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[url('/images/showcase/bg-13.webp')] bg-cover bg-center bg-fixed">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-[url('/images/showcase/bg-13.webp')] bg-cover bg-center bg-fixed mt-4 lg:mt-0">
             <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
-            <div className="relative p-8 md:p-12 z-10">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-6 text-center shadow-sm border border-white/50">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-sky-600 mb-2">15+</div>
-                  <div className="text-gray-700 font-bold">Tahun Pengalaman</div>
+            <div className="relative p-6 sm:p-8 md:p-12 z-10">
+              <div className="grid grid-cols-2 gap-4 lg:gap-6">
+                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-4 sm:p-6 text-center shadow-sm border border-white/50">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-sky-600 mb-1 sm:mb-2">15+</div>
+                  <div className="text-gray-700 font-bold text-xs sm:text-base">Tahun Pengalaman</div>
                 </div>
-                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-6 text-center shadow-sm border border-white/50">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-cyan-600 mb-2">500+</div>
-                  <div className="text-gray-700 font-bold">Kolam Terlayani</div>
+                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-4 sm:p-6 text-center shadow-sm border border-white/50">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-cyan-600 mb-1 sm:mb-2">500+</div>
+                  <div className="text-gray-700 font-bold text-xs sm:text-base">Kolam Terlayani</div>
                 </div>
-                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-6 text-center shadow-sm border border-white/50">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-teal-600 mb-2">98%</div>
-                  <div className="text-gray-700 font-bold">Klien Puas</div>
+                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-4 sm:p-6 text-center shadow-sm border border-white/50">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-teal-600 mb-1 sm:mb-2">98%</div>
+                  <div className="text-gray-700 font-bold text-xs sm:text-base">Klien Puas</div>
                 </div>
-                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-6 text-center shadow-sm border border-white/50">
-                  <div className="text-4xl md:text-5xl font-heading font-bold text-emerald-600 mb-2">24/7</div>
-                  <div className="text-gray-700 font-bold">Support</div>
+                <div className="stat-card bg-white/50 backdrop-blur-md rounded-2xl p-4 sm:p-6 text-center shadow-sm border border-white/50">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-emerald-600 mb-1 sm:mb-2">24/7</div>
+                  <div className="text-gray-700 font-bold text-xs sm:text-base">Support</div>
                 </div>
               </div>
             </div>

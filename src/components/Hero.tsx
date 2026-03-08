@@ -34,36 +34,36 @@ export default function Hero() {
             </p>
 
             {/* Offering Points Horizontal Cards */}
-            <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start mb-6">
-              <div className="flex flex-col items-center bg-white/5 rounded-xl shadow-sm px-6 py-4 min-w-[140px]">
-                <svg className="w-7 h-7 text-sky-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 w-full">
+              <div className="flex flex-col items-center justify-center bg-white/5 rounded-xl shadow-sm px-3 mx-auto w-full py-4 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-sky-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
                 </svg>
-                <span className="text-white text-base font-semibold text-center">Air Jernih</span>
-                <span className="text-xs text-sky-200 mt-1 text-center opacity-70">Kualitas air terbaik setiap hari</span>
+                <span className="text-white text-sm md:text-base font-semibold leading-tight mb-1">Air Jernih</span>
+                <span className="text-[10px] md:text-xs text-sky-200 opacity-70">Terbaik setiap hari</span>
               </div>
-              <div className="flex flex-col items-center bg-white/5 rounded-xl shadow-sm px-6 py-4 min-w-[140px]">
-                <svg className="w-7 h-7 text-cyan-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex flex-col items-center justify-center bg-white/5 rounded-xl shadow-sm px-3 mx-auto w-full py-4 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-cyan-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M9.75 3v2.25M14.25 3v2.25M7.5 6.75h9M4.5 21h15M4.5 6.75l1.5 13.5h12l1.5-13.5" />
                 </svg>
-                <span className="text-white text-base font-semibold text-center">Mesin Tahan</span>
-                <span className="text-xs text-cyan-200 mt-1 text-center opacity-70">Performa awet dan handal</span>
+                <span className="text-white text-sm md:text-base font-semibold leading-tight mb-1">Mesin Tahan</span>
+                <span className="text-[10px] md:text-xs text-cyan-200 opacity-70">Awet dan handal</span>
               </div>
-              <div className="flex flex-col items-center bg-white/5 rounded-xl shadow-sm px-6 py-4 min-w-[140px]">
-                <svg className="w-7 h-7 text-sky-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex flex-col items-center justify-center bg-white/5 rounded-xl shadow-sm px-3 mx-auto w-full py-4 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-sky-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="M12 12v6m0-6a6 6 0 016 6m-6-6a6 6 0 00-6 6" />
                 </svg>
-                <span className="text-white text-base font-semibold text-center">Risiko Minimal</span>
-                <span className="text-xs text-sky-200 mt-1 text-center opacity-70">Kerusakan & masalah berkurang</span>
+                <span className="text-white text-sm md:text-base font-semibold leading-tight mb-1">Risiko Minimal</span>
+                <span className="text-[10px] md:text-xs text-sky-200 opacity-70">Bebas masalah</span>
               </div>
-              <div className="flex flex-col items-center bg-white/5 rounded-xl shadow-sm px-6 py-4 min-w-[140px]">
-                <svg className="w-7 h-7 text-cyan-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex flex-col items-center justify-center bg-white/5 rounded-xl shadow-sm px-3 mx-auto w-full py-4 text-center border border-white/10 hover:bg-white/10 transition-colors">
+                <svg className="w-6 h-6 md:w-7 md:h-7 text-cyan-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-white text-base font-semibold text-center">Bergaransi</span>
-                <span className="text-xs text-cyan-200 mt-1 text-center opacity-70">Jaminan spare part & layanan</span>
+                <span className="text-white text-sm md:text-base font-semibold leading-tight mb-1">Bergaransi</span>
+                <span className="text-[10px] md:text-xs text-cyan-200 opacity-70">Spare part & tim</span>
               </div>
             </div>
 

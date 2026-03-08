@@ -37,10 +37,10 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center w-full gap-4 sm:gap-0">
+        <div className="flex flex-row items-center justify-center w-full">
           <button
             onClick={prevPage}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition sm:mr-4 shrink-0"
+            className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition mr-4 shrink-0"
             aria-label="Sebelumnya"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,10 +79,37 @@ export default function Testimonials() {
 
           <button
             onClick={nextPage}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition sm:ml-4 shrink-0 mt-4 sm:mt-0"
+            className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition ml-4 shrink-0"
             aria-label="Berikutnya"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation Controls */}
+        <div className="flex sm:hidden items-center justify-center gap-6 mt-8">
+          <button
+            onClick={prevPage}
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition shrink-0"
+            aria-label="Sebelumnya"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <div className="text-gray-500 font-semibold text-sm">
+             {page + 1} / {totalPages}
+          </div>
+
+          <button
+            onClick={nextPage}
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-sky-100 text-sky-600 font-bold hover:bg-sky-200 transition shrink-0"
+            aria-label="Berikutnya"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
