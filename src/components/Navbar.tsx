@@ -12,10 +12,13 @@ export default function Navbar() {
               <span className="text-xs md:text-sm text-gray-500 font-medium -mt-0.5">Pool Maintenance Specialist</span>
             </div>
           </div>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
             <a href="#masalah" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Masalah</a>
             <a href="#solusi" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Solusi</a>
             <a href="#keunggulan" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Keunggulan</a>
+            <a href="#klien" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Klien</a>
+            <a href="#galeri" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Galeri</a>
+            <a href="#lokasi" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Lokasi</a>
             <a href="#kontak" className="text-gray-600 hover:text-sky-600 transition-colors text-sm font-medium">Kontak</a>
           </div>
           <a href="https://wa.me/62811877480" target="_blank" rel="noopener noreferrer"
