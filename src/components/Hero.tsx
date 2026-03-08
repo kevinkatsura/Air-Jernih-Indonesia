@@ -108,13 +108,13 @@ export default function Hero() {
       </div>
 
       {/* Infinite Trust Banner - Positioned normally below content, above wave */}
-      <div className="relative w-full overflow-hidden z-10 opacity-70 hover:opacity-100 transition-opacity duration-300 mb-10 md:mb-14 mt-4 md:mt-6 group">
+      <div className="relative w-full overflow-hidden z-10 opacity-70 hover:opacity-100 transition-opacity duration-300 mb-10 md:mb-14 mt-4 md:mt-6 group" aria-hidden="true">
         <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused]">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-3 md:gap-4 px-1.5 md:px-2">
               {Array.from({ length: 15 }).map((_, j) => (
                 <div key={j} className="w-32 h-24 md:w-48 md:h-32 rounded-xl overflow-hidden shrink-0 border-[4px] md:border-[6px] border-white shadow-xl bg-white">
-                  <img loading="lazy" src={`/images/showcase/bg-${j + 1}.webp`} alt="Portfolio" className="w-full h-full object-cover rounded-lg" />
+                  <img loading="lazy" src={`/images/showcase/bg-${j + 1}.webp`} alt={`Proyek maintenance kolam renang Jakarta ${j + 1}`} className="w-full h-full object-cover rounded-lg" />
                 </div>
               ))}
             </div>

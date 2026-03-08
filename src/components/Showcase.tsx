@@ -16,13 +16,14 @@ export default function Showcase() {
           </p>
         </div>
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4" role="list" aria-label="Galeri inspirasi perawatan dan instalasi kolam renang">
           {images.map((src, idx) => (
-            <div key={idx} className="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+            <div key={idx} role="listitem" className="break-inside-avoid rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
               <img
                 loading="lazy"
                 src={src}
-                alt={`Inspirasi kolam renang ${idx + 1}`}
+                alt={`Hasil perawatan dan instalasi kolam renang PT Air Jernih Indonesia karya ${idx + 1}`}
+                title={`Portofolio Kolam Renang Air Jernih Indonesia #${idx + 1}`}
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
               />
             </div>
