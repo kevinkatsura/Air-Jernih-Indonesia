@@ -5,7 +5,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2 sm:gap-4 md:gap-5">
             <img loading="lazy" src="/images/brand/logo.webp" alt="Air Jernih Indonesia Logo"
-              className="w-10 h-10 sm:w-12 sm:h-12 md:w-18 md:h-18 rounded-lg object-contain" />
+              className="w-12 h-12 rounded-lg object-contain" />
             <div className="flex flex-col justify-center">
               <span className="font-heading font-bold text-gray-900 text-sm sm:text-base md:text-lg leading-tight">Air Jernih
                 Indonesia</span>
