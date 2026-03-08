@@ -2,43 +2,10 @@
 
 import { useState } from "react";
 
-const projectFiles = [
-  "WhatsApp Image 2026-02-25 at 10.29.38 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.38 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.39 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.39 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.39 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.40 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.40 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.40 AM (3).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.40 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.41 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.42 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.42 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.43 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.43 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.43 AM (3).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.43 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.44 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.44 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.44 AM (3).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.44 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.45 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.45 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.45 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.46 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.46 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.48 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.48 AM (2).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.48 AM.jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.49 AM (1).jpeg",
-  "WhatsApp Image 2026-02-25 at 10.29.49 AM.jpeg"
-];
-
-const projects = projectFiles.map((file, i) => ({
+const projects = Array.from({ length: 30 }).map((_, i) => ({
   name: `Klien ${i + 1}`,
   location: `Lokasi ${i + 1}`,
-  photo: `/assets/projects/${file}`,
+  photo: `/images/projects/project-${i + 1}.jpeg`,
   desc: `Proyek kolam renang contoh.`
 }));
 

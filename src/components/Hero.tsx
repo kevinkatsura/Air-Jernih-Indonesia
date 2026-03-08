@@ -83,7 +83,7 @@ export default function Hero() {
               <div className="flex flex-col items-center">
                 {/* Owner Image with Integrated Info */}
                 <div className="relative">
-                  <img loading="lazy" src="/assets/logo/owner.webp" alt="Trisno Aji - CEO" className="w-[720px] h-[720px] object-contain" />
+                  <img loading="lazy" src="/images/brand/owner.webp" alt="Trisno Aji - CEO" className="w-[720px] h-[720px] object-contain" />
                   {/* Subtle Info Overlay */}
                   <div className="absolute bottom-6 left-0 right-0 p-6">
                     <div className="text-center">
